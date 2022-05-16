@@ -8,10 +8,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C01_BeforeClass_AfterClass {
-    WebDriver driver;
+    static WebDriver driver;
+      /*
+    @BeforeClass ve @AfterClass notasyonlari sadece static methodlar icin calisir
+     */
 
     @BeforeClass
-    public void setUp(){
+    public static void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -19,7 +22,7 @@ public class C01_BeforeClass_AfterClass {
     }
 
     @AfterClass
-    public void tearDown(){
+    public static void tearDown(){
         driver.close();
     }
 
