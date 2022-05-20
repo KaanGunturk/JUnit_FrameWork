@@ -52,7 +52,7 @@ public class C02_Alerts {
     public void dismissAlert(){
         //● Bir metod olusturun: dismissAlert
         //        ○ 2. butona tıklayın, uyarıdaki Cancel butonuna tıklayın ve result mesajının       “successfuly” icermedigini test edin.
-
+        //      “successfuly” icermedigini test edin.
         driver.findElement(By.xpath("//*[text()='Click for JS Confirm']")).click();
         driver.switchTo().alert().dismiss();
 
